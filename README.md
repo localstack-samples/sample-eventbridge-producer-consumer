@@ -11,7 +11,7 @@
 
 ## Introduction
 
-The sample application create a Producer & Consumer using two Lambda functions which is coupled with an EventBridge rule to determine which events are routed to the consumer. The example demonstrates how an ATM application at a bank could generate events, and the rule only passes **Approved** transactions to an event consuming application. Users can deploy this application sample on LocalStack & AWS using Serverless Application Model (SAM) with no changes. To test this application sample, we will demonstrate how you use LocalStack to deploy the infrastructure on your developer machine and your CI environment. Furthermore, we will showcase how you can check out the event-driven architecture using LocalStack Web Application by verifying the logs.
+The sample application create a Producer & Consumer using two Lambda functions. It is coupled with an EventBridge rule to determine events that are routed to the consumer. The example demonstrates how an ATM application at a bank could generate events, and the rule only passes **Approved** transactions to an event consuming application. Users can deploy this application sample on LocalStack & AWS using Serverless Application Model (SAM) without any changes. To test this application sample, we will demonstrate how you use LocalStack to deploy the infrastructure on your developer machine and in your CI environment. Furthermore, we will showcase how you can check out the event-driven architecture using LocalStack Web Application by verifying the logs.
 
 ## Architecture diagram
 
