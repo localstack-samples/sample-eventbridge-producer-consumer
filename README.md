@@ -103,7 +103,7 @@ Users can adapt this example workflow to run in their own CI environment. LocalS
 
 ## Learn more
 
-The sample application is based on a public [AWS sample app](https://aws.amazon.com/blogs/compute/integrating-amazon-eventbridge-into-your-serverless-applications/) that deploys an event producer and consumer in Lambda, and create an EventBridge rule to route events.
+The sample application is based on a public [AWS sample app](https://aws.amazon.com/blogs/compute/integrating-amazon-eventbridge-into-your-serverless-applications/) that deploys an event producer and consumer in Lambda, and creates an EventBridge rule to route events.
 
 ## Contributing
 
