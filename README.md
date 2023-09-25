@@ -17,7 +17,7 @@ The sample application create a Producer & Consumer using two Lambda functions w
 
 The following diagram shows the architecture that this sample application builds and deploys:
 
-![]()
+![Architecture Diagram](./images/architecture-diagram.png)
 
 We are using the following AWS services and their features to build our infrastructure:
 
