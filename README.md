@@ -32,10 +32,10 @@ We are using the following AWS services and their features to build our infrastr
 - [AWS CLI](https://docs.localstack.cloud/user-guide/integrations/aws-cli/) with the [`awslocal` wrapper](https://docs.localstack.cloud/user-guide/integrations/aws-cli/#localstack-aws-cli-awslocal).
 - [Node.js 18.x](https://nodejs.org/en/download/) with the [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) package manager. 
 
-Start LocalStack Pro with the `LOCALSTACK_API_KEY` pre-configured:
+Start LocalStack Pro with the `LOCALSTACK_AUTH_TOKEN` pre-configured:
 
 ```shell
-export LOCALSTACK_API_KEY=<your-api-key>
+export LOCALSTACK_AUTH_TOKEN=<your-auth-token>
 DEBUG=1 localstack start
 ```
 
