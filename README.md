@@ -31,7 +31,7 @@ We are using the following AWS services and their features to build our infrastr
 - [`localstack` CLI](https://docs.localstack.cloud/getting-started/installation/#localstack-cli).
 - [Serverless Application Model](https://docs.localstack.cloud/user-guide/integrations/aws-sam/) with the [`samlocal`](https://github.com/localstack/aws-sam-cli-local) installed.
 - [AWS CLI](https://docs.localstack.cloud/user-guide/integrations/aws-cli/) with the [`awslocal` wrapper](https://docs.localstack.cloud/user-guide/integrations/aws-cli/#localstack-aws-cli-awslocal).
-- [Node.js 18.x](https://nodejs.org/en/download/) with the [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) package manager.
+- [Node.js 22.x](https://nodejs.org/en/download/) with the [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) package manager.
 
 ## Start LocalStack
 
