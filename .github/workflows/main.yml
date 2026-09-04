@@ -16,6 +16,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   sam:
@@ -51,10 +52,6 @@ jobs:
           docker pull localstack/localstack-pro:latest
           # Start LocalStack in the background
           LOCALSTACK_DEBUG=1 lstk start --non-interactive
-          # Wait for the LocalStack container to become ready before timing out
-          echo "Waiting for LocalStack startup..."
-          lstk status
-          echo "Startup complete"
 
       - name: Install dependencies
         run: |
@@ -96,3 +93,10 @@ jobs:
         with:
           name: diagnose.json.gz
           path: ./diagnose.json.gz
+
+      # Re-enabling the workflow resets GitHub's 60-day scheduled-workflow inactivity timer
+      - name: Keep the scheduled workflow enabled
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT repos/${{ github.repository }}/actions/workflows/main.yml/enable

@@ -18,10 +18,6 @@ start:		## Start LocalStack
 stop:		## Stop LocalStack
 	@lstk stop
 
-ready:		## Wait until LocalStack is ready
-	@echo Waiting on the LocalStack container...
-	@lstk status && echo LocalStack is ready to use! || (echo Gave up waiting on LocalStack, exiting. && exit 1)
-
 logs:		## Save the logs in a separate file
 	@lstk logs > logs.txt
 
@@ -30,4 +26,4 @@ deploy:		## Build and deploy the SAM application
 	lstk sam build
 	lstk sam deploy --no-confirm-changeset
 
-.PHONY: usage install start stop ready logs deploy
+.PHONY: usage install start stop logs deploy
