@@ -16,7 +16,6 @@ on:
 
 permissions:
   contents: write
-  actions: write
 
 jobs:
   sam:
@@ -93,10 +92,3 @@ jobs:
         with:
           name: diagnose.json.gz
           path: ./diagnose.json.gz
-
-      # Re-enabling the workflow resets GitHub's 60-day scheduled-workflow inactivity timer
-      - name: Keep the scheduled workflow enabled
-        if: always()
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: gh api -X PUT repos/${{ github.repository }}/actions/workflows/main.yml/enable
