@@ -51,7 +51,7 @@ jobs:
         run: |
           docker pull localstack/localstack-pro:latest
           # Start LocalStack in the background
-          LOCALSTACK_DEBUG=1 lstk start --non-interactive
+          LOCALSTACK_DEBUG=1 lstk start
 
       - name: Install dependencies
         run: |
