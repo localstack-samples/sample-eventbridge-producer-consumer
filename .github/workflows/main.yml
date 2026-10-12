@@ -41,7 +41,9 @@ jobs:
           use-installer: true
 
       - name: Install lstk
-        run: npm install -g @localstack/lstk
+        run: |
+          npm install -g @localstack/lstk
+          lstk setup aws --force --non-interactive
 
       - name: Start LocalStack
         env:
@@ -63,10 +65,8 @@ jobs:
       - name: Deploy the SAM application
         run: lstk sam deploy --no-confirm-changeset
 
-      - name: Check logs and AWS resources
-        run: |
-          lstk aws lambda list-functions
-          lstk aws events list-rules
+      - name: Run tests
+        run: make test
 
       - name: Send a Slack notification
         if: failure() || github.event_name != 'pull_request'
