@@ -26,4 +26,7 @@ deploy:		## Build and deploy the SAM application
 	lstk sam build
 	lstk sam deploy --no-confirm-changeset
 
-.PHONY: usage install start stop logs deploy
+test:		## Invoke the producer and check what each consumer received
+	./test.sh
+
+.PHONY: usage install start stop logs deploy test
